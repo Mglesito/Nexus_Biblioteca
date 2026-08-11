@@ -1,0 +1,14 @@
+Pagina de tombo
+  Campos necessarios:Registro, data de entrada, autor, título, volume, exemplar, edição, ano, local, tipo de aquisição, código de genero
+  Botão para cadastrar tombo
+  Tabela de Tombos(ao lado de cada item um botao de editar tombo)
+Pagina de cadastro de aluno
+  Campos necessarios:Nome,CPF,ano,turma,curso,endereço,bairro,contato,senha,email
+  Botão confirmar cadastro
+Pagina de cadastro de emprestimo
+  
+Pagina de cadastro de livro
+Pagina de cadastro de bibliotecario
+pagina de login
+dashboard do bibliotecario
+dashboard do aluno
