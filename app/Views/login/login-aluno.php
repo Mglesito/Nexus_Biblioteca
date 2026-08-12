@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login do aluno — SBE</title>
+  <title>Login</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('css/styles.css') ?>">
@@ -24,16 +24,12 @@
 
   <div class="login-card">
     <div class="login-body">
-      <div class="role-tabs">
-        <a href="login-aluno.html" class="active">Leitor / Aluno</a>
-        <a href="login-bibliotecario.html" class="">Bibliotecário</a>
-      </div>
-      <h1 class="login-title">Acesso do leitor</h1>
-      <p class="login-sub">Entre com seu CPF para consultar o acervo e seus empréstimos.</p>
+      <h1 class="login-title">Acesso ao sistema</h1>
+      <p class="login-sub">Entre com seu CPF para ter acesso e senha.</p>
       <?= form_open('login/verificar_usuario') ?>
         <div class="field">
           <label for="login-user">CPF</label>
-          <input id="login-user" name="cpf" type="text" placeholder="000.000.000-00" autocomplete="username" required>
+          <input id="login-user" name="cpf" type="number" placeholder="000.000.000-00" autocomplete="username" required>
         </div>
         <div class="field">
           <label for="login-pass">Senha</label>

@@ -89,3 +89,161 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 16:29:40 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, none returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 16:42:48 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 16:42:49 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 16:42:50 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 16:42:54 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 16:44:32 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:20:21 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:21:27 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:21:36 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:21:40 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:21:41 --> Error: Object of class CodeIgniter\HTTP\RedirectResponse could not be converted to string
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:29:19 --> Error: Undefined constant "Dashboard"
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')
+CRITICAL - 2026-08-12 17:29:21 --> Error: Undefined constant "Dashboard"
+[Method: GET, Route: aluno]
+in APPPATH\Views\dashboard\dashboard-aluno.php on line 27.
+ 1 SYSTEMPATH\View\View.php(240): include()
+ 2 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('dashboard/dashboard-aluno', [], true)
+ 4 APPPATH\Controllers\DashboardAlunoController.php(12): view('dashboard/dashboard-aluno')
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardAlunoController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAlunoController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Bilbioteca\\public\\index.php')

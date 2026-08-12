@@ -47,4 +47,9 @@ class LoginController extends BaseController
             return redirect()->to('/login')->with('error', 'Credenciais de Login Inválidas.');
         }
     }
+
+    public function deslogar(){
+        session()->destroy();
+        return redirect()->to('/');
+    }
 }
