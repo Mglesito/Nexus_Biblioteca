@@ -17,6 +17,7 @@ $routes->get('/bibliotecario/modal', 'ModalController::index');
 $routes->get('/bibliotecario/dashboard', 'DashboardBibliotecarioController::index');
 $routes->get('/bibliotecario/acervo', 'AcervoController::index');
 $routes->get('/bibliotecario/emprestimos', 'DashboardEmprestimoBibliotecarioController::index');
+    $routes->post('/bibliotecario/emprestimos/salvar', 'DashboardEmprestimoBibliotecarioController::salvar');
 $routes->get('/bibliotecario/cadastro_aluno', 'CadastroAlunoController::index');
     $routes->post('/bibliotecario/cadastro_aluno/salvar', 'CadastroAlunoController::salvar');
 $routes->get('/bibliotecario/historico', 'HistoricoController::index');

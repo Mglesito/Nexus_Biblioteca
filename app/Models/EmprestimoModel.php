@@ -12,7 +12,7 @@ class EmprestimoModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["id","data_emprestimo","data_devolucao","devolvido","cpf"];
+    protected $allowedFields    = ["id","registro","data_emprestimo","data_devolucao","devolvido","cpf"];
 
     protected bool $allowEmptyInserts = true;
     protected bool $updateOnlyChanged = true;

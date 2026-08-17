@@ -55,16 +55,21 @@
     </div>
     <div class="panel">
       <h2>Novo empréstimo</h2>
+      <form method="post" action="<?= site_url('bibliotecario/emprestimos/salvar') ?>">
+      <?= csrf_field() ?>
       <div class="form-grid">
-        <div class="field"><label>Aluno</label><select>
-            <input type="text">
-          </select></div>
-        <div class="field full"><label>Livro</label><select>
-            <input type="number">
-          </select></div>
+        <div class="field"><label>Aluno</label>
+            <input type="text" name="cpf">
+        </div>
+        <div class="field"><label>Livro</label>
+            <input type="number" name="registro">
+        </div>
       </div>
+      <input type="hidden" value="0" name="devolvido">
+      <input type="hidden" name="data_emprestimo" value="<?= date('Y-m-d') ?>">
       <p class="form-note">Selecione um aluno sem empréstimo ativo e um livro disponível.</p>
       <button class="btn-primary small" type="submit">Registrar empréstimo</button>
+      </form>
     </div>
     <div class="section-row">
       <h2>Empréstimos ativos</h2>

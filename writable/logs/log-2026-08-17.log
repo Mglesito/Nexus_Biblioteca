@@ -408,3 +408,7 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
 15 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 17 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Projeto_Nexus_Biblioteca\\public\\index.php')
+DEBUG - 2026-08-17 22:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-17 22:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-17 22:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-08-17 22:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
