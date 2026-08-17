@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leitores — SBE</title>
+  <title>Acervo — SBE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
@@ -29,13 +29,13 @@
 
       <nav class="nav">
         <?= anchor('/bibliotecario/dashboard', 'Dashboard') ?>
-        <?= anchor('/bibliotecario/acervo', 'Acervo') ?>
+        <?= anchor('/bibliotecario/acervo', 'Acervo', ['class' => 'active']) ?>
         <?= anchor('/bibliotecario/tombo', 'Tombos') ?>
         <?= anchor('/bibliotecario/cadastro_aluno', 'Alunos') ?>
         <?= anchor('/bibliotecario/livros', 'Livros') ?>
         <?= anchor('/bibliotecario/emprestimos', 'Empréstimos') ?>
         <?= anchor('/bibliotecario/', 'Remover') ?>
-        <?= anchor('/bibliotecario/leitores', 'Leitores', ['class' => 'active']) ?>
+        <?= anchor('/bibliotecario/leitores', 'Leitores') ?>
         <?= anchor('/bibliotecario/historico', 'Histórico') ?>
       </nav>
 
@@ -49,24 +49,24 @@
   <main class="main">
     <div class="page-head">
       <div>
-        <h1>Leitores</h1>
-        <p>Situação dos alunos cadastrados.</p>
+        <h1>Acervo</h1>
+        <p>Todos os livros cadastrados na biblioteca.</p>
       </div>
     </div>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>CPF</th>
-            <th>Nome</th>
-            <th>Turma</th>
-            <th>Curso</th>
-            <th>Situação</th>
+            <th>Registro</th>
+            <th>Autor</th>
+            <th>Título</th>
+            <th>Status</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td colspan="5" style="text-align:center;color:var(--ink-soft)">Nenhum leitor cadastrado.</td>
+            <td colspan="5" style="text-align:center;color:var(--ink-soft)">Nenhum livro cadastrado.</td>
           </tr>
         </tbody>
       </table>

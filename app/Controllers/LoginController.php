@@ -52,4 +52,8 @@ class LoginController extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+
+    public function salvar($Aluno){
+        $this->usuarioModel->save($Aluno);
+    }
 }

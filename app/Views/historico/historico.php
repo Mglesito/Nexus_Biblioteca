@@ -6,7 +6,7 @@
   <title>Histórico — SBE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="<?= base_url('css/styles.css') ?>">
   
 </head>
 <body>
@@ -24,15 +24,15 @@
     </div>
     
 <nav class="nav">
-  <a href="dashboard-bibliotecario.html" class="">Dashboard</a>
-  <a href="acervo.html" class="">Acervo</a>
-  <a href="tombo.html" class="">Tombos</a>
-  <a href="cadastro-aluno.html" class="">Alunos</a>
-  <a href="cadastro-livro.html" class="">Livros</a>
-  <a href="emprestimos.html" class="">Empréstimos</a>
-  <a href="cadastro-bibliotecario.html" class="">Bibliotecários</a>
-  <a href="leitores.html" class="">Leitores</a>
-  <a href="historico.html" class="active">Histórico</a>
+        <?= anchor('/bibliotecario/dashboard', 'Dashboard') ?>
+        <?= anchor('/bibliotecario/acervo', 'Acervo') ?>
+        <?= anchor('/bibliotecario/tombo', 'Tombos') ?>
+        <?= anchor('/bibliotecario/cadastro_aluno', 'Alunos') ?>
+        <?= anchor('/bibliotecario/livros', 'Livros') ?>
+        <?= anchor('/bibliotecario/emprestimos', 'Empréstimos') ?>
+        <?= anchor('/bibliotecario/', 'Remover') ?>
+        <?= anchor('/bibliotecario/leitores', 'Leitores') ?>
+        <?= anchor('/bibliotecario/historico', 'Histórico', ['class' => 'active']) ?>
 </nav>
 
     <div class="user-chip">

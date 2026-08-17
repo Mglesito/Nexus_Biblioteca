@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leitores — SBE</title>
+  <title>Cadastro de livro — SBE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
@@ -32,10 +32,10 @@
         <?= anchor('/bibliotecario/acervo', 'Acervo') ?>
         <?= anchor('/bibliotecario/tombo', 'Tombos') ?>
         <?= anchor('/bibliotecario/cadastro_aluno', 'Alunos') ?>
-        <?= anchor('/bibliotecario/livros', 'Livros') ?>
+        <?= anchor('/bibliotecario/livros', 'Livros', ['class' => 'active']) ?>
         <?= anchor('/bibliotecario/emprestimos', 'Empréstimos') ?>
         <?= anchor('/bibliotecario/', 'Remover') ?>
-        <?= anchor('/bibliotecario/leitores', 'Leitores', ['class' => 'active']) ?>
+        <?= anchor('/bibliotecario/leitores', 'Leitores') ?>
         <?= anchor('/bibliotecario/historico', 'Histórico') ?>
       </nav>
 
@@ -49,27 +49,50 @@
   <main class="main">
     <div class="page-head">
       <div>
-        <h1>Leitores</h1>
-        <p>Situação dos alunos cadastrados.</p>
+        <h1>Cadastro de livro</h1>
+        <p>Cadastre livros individualmente no sistema.</p>
       </div>
     </div>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>CPF</th>
-            <th>Nome</th>
-            <th>Turma</th>
-            <th>Curso</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="5" style="text-align:center;color:var(--ink-soft)">Nenhum leitor cadastrado.</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="panel">
+      <h2>Novo livro</h2>
+      <form method="post" action="<?= site_url('bibliotecario/livros/salvar') ?>">
+      <?= csrf_field() ?>
+      <div class="form-grid">
+
+        <div class="field">
+          <label>Registro</label>
+          <input placeholder="Ex.: L-2026-001" name="registro">
+        </div>
+
+        <div class="field">
+          <label>Exemplar</label>
+          <input type="number" placeholder="Ex.: 1" min="1" name="exemplar">
+        </div>
+
+        <div class="field">
+          <label>Autor</label>
+          <input placeholder="Nome do autor" name="autor">
+        </div>
+
+        <div class="field full">
+          <label>Título</label>
+          <input placeholder="Título do livro" name="titulo">
+        </div>
+
+        <div class="field full">
+          <label>Status / Estado do livro</label>
+          <select name="status">
+            <option>Disponível — bom estado</option>
+            <option>Disponível — estado regular</option>
+            <option>Disponível — danificado</option>
+            <option>Em manutenção</option>
+            <option>Indisponível</option>
+          </select>
+        </div>
+
+      </div>
+      <button class="btn-primary small" type="submit">Cadastrar livro</button>
+      </form>
     </div>
   </main>
 </body>
