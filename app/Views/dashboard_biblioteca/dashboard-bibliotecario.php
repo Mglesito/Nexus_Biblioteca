@@ -20,7 +20,7 @@
     <div class="header-top">Governo do Estado do Ceará · Secretaria da Educação</div>
     <div class="header-main">
       <div class="header-brand">
-        <div class="seal"><img src="walter.jpeg" alt="Logo da escola"></div>
+        <div class="seal"><img src="<?= base_url('walter.jpg') ?>" alt="Logo da escola"></div>
         <div>
           <div class="school">Escola Estadual De Educação Profissional Walter Ramos de Araújo</div>
           <div class="sys">SBE · Sistema de Biblioteca Escolar</div>
@@ -34,7 +34,6 @@
         <?= anchor('/bibliotecario/cadastro_aluno', 'Alunos') ?>
         <?= anchor('/bibliotecario/livros', 'Livros') ?>
         <?= anchor('/bibliotecario/emprestimos', 'Empréstimos') ?>
-        <?= anchor('/bibliotecario/', 'Remover') ?>
         <?= anchor('/bibliotecario/leitores', 'Leitores') ?>
         <?= anchor('/bibliotecario/historico', 'Histórico') ?>
       </nav>
@@ -42,7 +41,7 @@
       <div class="user-chip">
         <span class="role-badge">Bibliotecário</span>
         <span>Setor de Biblioteca</span>
-        <a href="login-aluno.html" class="tbl-btn">Sair</a>
+        <?= anchor('/login/deslogar', 'Sair', ['class' => 'tbl-btn']) ?>
       </div>
     </div>
   </header>
@@ -55,23 +54,23 @@
     </div>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="num">—</div>
+        <div class="num"><?= $totalLivros ?? 0 ?></div>
         <div class="lab">Livros cadastrados</div>
       </div>
       <div class="stat-card">
-        <div class="num">—</div>
+        <div class="num"><?= $livrosDisponiveis ?? 0 ?></div>
         <div class="lab">Disponíveis</div>
       </div>
       <div class="stat-card">
-        <div class="num">—</div>
+        <div class="num"><?= $livrosEmprestados ?? 0 ?></div>
         <div class="lab">Emprestados</div>
       </div>
       <div class="stat-card">
-        <div class="num">—</div>
+        <div class="num"><?= $totalAlunos ?? 0 ?></div>
         <div class="lab">Alunos cadastrados</div>
       </div>
       <div class="stat-card alert">
-        <div class="num">—</div>
+        <div class="num"><?= $alunosEmAtraso ?? 0 ?></div>
         <div class="lab">Em atraso</div>
       </div>
     </div>
@@ -89,9 +88,20 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td colspan="4" style="text-align:center;color:var(--ink-soft)">Nenhum empréstimo carregado.</td>
-          </tr>
+          <?php if (!empty($emprestimosEmAtraso)): ?>
+            <?php foreach ($emprestimosEmAtraso as $atraso): ?>
+              <tr>
+                <td><?= esc($atraso['nome_aluno'] ?? 'Aluno não encontrado') ?></td>
+                <td><?= esc($atraso['turma'] ?? '-') ?></td>
+                <td><?= esc($atraso['titulo'] ?? 'Livro não encontrado') ?></td>
+                <td><?= esc($atraso['data_devolucao']) ?></td>
+              </tr>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <tr>
+              <td colspan="4" style="text-align:center;color:var(--ink-soft)">Nenhum empréstimo em atraso.</td>
+            </tr>
+          <?php endif; ?>
         </tbody>
       </table>
     </div>

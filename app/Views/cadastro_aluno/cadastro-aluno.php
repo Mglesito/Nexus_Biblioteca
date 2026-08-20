@@ -20,7 +20,7 @@
     <div class="header-top">Governo do Estado do Ceará · Secretaria da Educação</div>
     <div class="header-main">
       <div class="header-brand">
-        <div class="seal"><img src="walter.jpeg" alt="Logo da escola"></div>
+        <div class="seal"><img src="<?= base_url('walter.jpg') ?>" alt="Logo da escola"></div>
         <div>
           <div class="school">Escola Estadual De Educação Profissional Walter Ramos de Araújo</div>
           <div class="sys">SBE · Sistema de Biblioteca Escolar</div>
@@ -34,7 +34,6 @@
         <?= anchor('/bibliotecario/cadastro_aluno', 'Alunos', ['class' => 'active']) ?>
         <?= anchor('/bibliotecario/livros', 'Livros') ?>
         <?= anchor('/bibliotecario/emprestimos', 'Empréstimos') ?>
-        <?= anchor('/bibliotecario/', 'Remover') ?>
         <?= anchor('/bibliotecario/leitores', 'Leitores') ?>
         <?= anchor('/bibliotecario/historico', 'Histórico') ?>
       </nav>
@@ -42,7 +41,7 @@
       <div class="user-chip">
         <span class="role-badge">Bibliotecário</span>
         <span>Setor de Biblioteca</span>
-        <a href="login-aluno.html" class="tbl-btn">Sair</a>
+        <?= anchor('/login/deslogar', 'Sair', ['class' => 'tbl-btn']) ?>
       </div>
     </div>
   </header>
@@ -88,10 +87,31 @@
             <th>Contato</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td colspan="6" style="text-align:center;color:var(--ink-soft)">Nenhum aluno cadastrado.</td>
-          </tr>
+        <?php if (!empty($Aluno)): ?>
+
+            <?php foreach ($Aluno as $A): ?>
+
+              <tr>
+                <td><?= esc($A['nome']) ?></td>
+                <td><?= esc($A['cpf']) ?></td>
+                <td><?= esc($A['ano']) ?></td>
+                <td><?= esc($A['turma']) ?></td>
+                <td><?= esc($A['curso']) ?></td>
+                <td><?= esc($A['contato']) ?></td>
+              </tr>
+
+            <?php endforeach; ?>
+
+          <?php else: ?>
+
+            <tr>
+              <td colspan="2" style="text-align:center;color:var(--ink-soft)">
+                Nenhum aluno cadastrado.
+              </td>
+            </tr>
+
+          <?php endif; ?>
+
         </tbody>
       </table>
     </div>

@@ -18,6 +18,8 @@ $routes->get('/bibliotecario/dashboard', 'DashboardBibliotecarioController::inde
 $routes->get('/bibliotecario/acervo', 'AcervoController::index');
 $routes->get('/bibliotecario/emprestimos', 'DashboardEmprestimoBibliotecarioController::index');
     $routes->post('/bibliotecario/emprestimos/salvar', 'DashboardEmprestimoBibliotecarioController::salvar');
+    $routes->get('/bibliotecario/emprestimos/devolver/(:segment)', 'DashboardEmprestimoBibliotecarioController::devolver/$1');
+    $routes->get('/bibliotecario/emprestimos/adicionarDias/(:segment)', 'DashboardEmprestimoBibliotecarioController::adicionarDias/$1');
 $routes->get('/bibliotecario/cadastro_aluno', 'CadastroAlunoController::index');
     $routes->post('/bibliotecario/cadastro_aluno/salvar', 'CadastroAlunoController::salvar');
 $routes->get('/bibliotecario/historico', 'HistoricoController::index');
@@ -31,4 +33,5 @@ $routes->get('/bibliotecario/tombo', 'TomboController::index');
     $routes->get('/bibliotecario/tombo/excluir/(:segment)', 'TomboController::excluir/$1');
 
 $routes->get('/suporte', 'SuporteController::index');
+    $routes->post('/suporte/salvar', 'SuporteController::salvar');
 $routes->setAutoRoute(true);

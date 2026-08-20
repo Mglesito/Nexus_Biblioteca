@@ -43,4 +43,12 @@ class AlunoModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    /**
+     * Conta o total de alunos cadastrados
+     */
+    public function totalAlunos()
+    {
+        return $this->countAllResults();
+    }
 }

@@ -12,7 +12,7 @@ class LivroModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["id","registro","autor","titulo","exemplar","status"];
+    protected $allowedFields    = ["id","registro","autor","titulo","exemplar","status","emprestado"];
 
     protected bool $allowEmptyInserts = true;
     protected bool $updateOnlyChanged = true;
@@ -43,4 +43,35 @@ class LivroModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    /**
+     * Conta o total de livros cadastrados
+     */
+    public function totalLivros()
+    {
+        return $this->countAllResults();
+    }
+
+    /**
+     * Conta livros disponíveis (não emprestados)
+     */
+    public function livrosDisponiveis()
+    {
+        return $this->where('emprestado', 0)->countAllResults();
+    }
+
+    /**
+     * Conta livros emprestados
+     */
+    public function livrosEmprestados()
+    {
+        return $this->where('emprestado', 1)->countAllResults();
+    }
+
+    public function listarDisponiveis()
+    {
+        return $this->where('emprestado', 0)
+            ->orderBy('titulo', 'ASC')
+            ->findAll();
+    }
 }

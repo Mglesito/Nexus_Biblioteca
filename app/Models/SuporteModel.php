@@ -12,7 +12,7 @@ class SuporteModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ["cpf","nome"];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

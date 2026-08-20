@@ -20,7 +20,7 @@
     <div class="header-top">Governo do Estado do Ceará · Secretaria da Educação</div>
     <div class="header-main">
       <div class="header-brand">
-        <div class="seal"><img src="walter.jpeg" alt="Logo da escola"></div>
+        <div class="seal"><img src="<?= base_url('walter.jpg') ?>" alt="Logo da escola"></div>
         <div>
           <div class="school">Escola Estadual De Educação Profissional Walter Ramos de Araújo</div>
           <div class="sys">SBE · Sistema de Biblioteca Escolar</div>
@@ -47,14 +47,46 @@
         <p>Consulte os títulos disponíveis no acervo.</p>
       </div>
     </div>
-    <div class="search-row"><input type="search" placeholder="Buscar por título, autor ou registro..."></div>
+    <div class="search-row"><input id="busca-catalogo" type="search" placeholder="Buscar por título, autor ou registro..." aria-label="Buscar no catálogo"></div>
     <div class="chips">
-      <span class="chip active">Todos</span>
+      <span class="chip active">Disponíveis</span>
     </div>
-    <div class="empty-state">
-      <h3>Nenhum título cadastrado</h3>
-      <p>O catálogo será preenchido quando os livros forem cadastrados no banco de dados.</p>
+    <div class="table-wrap">
+      <table id="tabela-catalogo">
+        <thead>
+          <tr>
+            <th>Registro</th>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Exemplar</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php if (!empty($livros)): ?>
+            <?php foreach ($livros as $livro): ?>
+              <tr>
+                <td><?= esc($livro['registro']) ?></td>
+                <td><?= esc($livro['titulo']) ?></td>
+                <td><?= esc($livro['autor']) ?></td>
+                <td><?= esc($livro['exemplar']) ?></td>
+                <td><?= esc($livro['status']) ?></td>
+              </tr>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <tr><td colspan="5" style="text-align:center;color:var(--ink-soft)">Nenhum livro disponível.</td></tr>
+          <?php endif; ?>
+        </tbody>
+      </table>
     </div>
+    <script>
+      document.getElementById('busca-catalogo').addEventListener('input', function () {
+        const termo = this.value.toLowerCase();
+        document.querySelectorAll('#tabela-catalogo tbody tr').forEach(function (linha) {
+          linha.hidden = !linha.textContent.toLowerCase().includes(termo);
+        });
+      });
+    </script>
   </main>
 </body>
 

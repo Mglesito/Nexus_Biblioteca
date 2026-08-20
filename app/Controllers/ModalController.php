@@ -9,6 +9,10 @@ class ModalController extends BaseController
 {
     public function index()
     {
+        if ($redirect = $this->verificarBibliotecario()) {
+            return $redirect;
+        }
+
         return view('modal/modal');
     }
 }

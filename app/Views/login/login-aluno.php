@@ -20,7 +20,7 @@
 
     <div class="letterhead">
       <div class="seal">
-        <img src="walter.jpeg" alt="Logo da escola">
+        <img src="<?= base_url('walter.jpg') ?>" alt="Logo da escola">
       </div>
       <div class="org">Governo do Estado do Ceará · Secretaria da Educação</div>
       <div class="school">Escola Estadual De Educação Profissional Walter Ramos de Araújo</div>
@@ -33,11 +33,11 @@
         <?= form_open('login/verificar_usuario') ?>
         <div class="field">
           <label for="login-user">CPF</label>
-          <input id="login-user" name="cpf" type="number" placeholder="000.000.000-00" autocomplete="username" required>
+          <input id="login-user" name="cpf" type="text" placeholder="000.000.000-00" autocomplete="username" required>
         </div>
         <div class="field">
           <label for="login-pass">Senha</label>
-          <input id="login-pass" name="senha" type="password" placeholder="••••••••" autocomplete="current-password"
+          <input id="login-pass" name="senha" type="text" placeholder="••••••••" autocomplete="current-password"
             required>
         </div>
         <button type="submit" class="btn-primary">Entrar</button>

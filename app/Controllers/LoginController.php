@@ -39,7 +39,15 @@ class LoginController extends BaseController
 
     public function logar($cpf,$senha){
         $usuario = $this->procurar($cpf);
-        if($usuario['cpf'] == $cpf and $usuario['senha'] == $senha){
+        $senhaValida = password_verify($senha, $usuario['senha']);
+
+        // Compatibilidade temporária com usuários cadastrados antes do hash.
+        if (!$senhaValida && hash_equals((string) $usuario['senha'], (string) $senha)) {
+            $senhaValida = true;
+            $this->usuarioModel->update($usuario['cpf'], ['senha' => $senha]);
+        }
+
+        if($usuario['cpf'] == $cpf && $senhaValida){
             $dadosUsuario = ['cpf' => $usuario['cpf'],'logado'=> true,'tipo_usuario'=> $usuario['tipo_usuario']];
             session()->set($dadosUsuario);
             return redirect()->to('/');

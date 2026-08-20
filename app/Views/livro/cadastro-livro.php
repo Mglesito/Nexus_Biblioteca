@@ -20,7 +20,7 @@
     <div class="header-top">Governo do Estado do Ceará · Secretaria da Educação</div>
     <div class="header-main">
       <div class="header-brand">
-        <div class="seal"><img src="walter.jpeg" alt="Logo da escola"></div>
+        <div class="seal"><img src="<?= base_url('walter.jpg') ?>" alt="Logo da escola"></div>
         <div>
           <div class="school">Escola Estadual De Educação Profissional Walter Ramos de Araújo</div>
           <div class="sys">SBE · Sistema de Biblioteca Escolar</div>
@@ -34,7 +34,6 @@
         <?= anchor('/bibliotecario/cadastro_aluno', 'Alunos') ?>
         <?= anchor('/bibliotecario/livros', 'Livros', ['class' => 'active']) ?>
         <?= anchor('/bibliotecario/emprestimos', 'Empréstimos') ?>
-        <?= anchor('/bibliotecario/', 'Remover') ?>
         <?= anchor('/bibliotecario/leitores', 'Leitores') ?>
         <?= anchor('/bibliotecario/historico', 'Histórico') ?>
       </nav>
@@ -42,7 +41,7 @@
       <div class="user-chip">
         <span class="role-badge">Bibliotecário</span>
         <span>Setor de Biblioteca</span>
-        <a href="login-aluno.html" class="tbl-btn">Sair</a>
+        <?= anchor('/login/deslogar', 'Sair', ['class' => 'tbl-btn']) ?>
       </div>
     </div>
   </header>
@@ -61,22 +60,12 @@
 
         <div class="field">
           <label>Registro</label>
-          <input placeholder="Ex.: L-2026-001" name="registro">
+          <input placeholder="Ex.: L-2026-001" name="registro" type="text">
         </div>
 
         <div class="field">
           <label>Exemplar</label>
           <input type="number" placeholder="Ex.: 1" min="1" name="exemplar">
-        </div>
-
-        <div class="field">
-          <label>Autor</label>
-          <input placeholder="Nome do autor" name="autor">
-        </div>
-
-        <div class="field full">
-          <label>Título</label>
-          <input placeholder="Título do livro" name="titulo">
         </div>
 
         <div class="field full">

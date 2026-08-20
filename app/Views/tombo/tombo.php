@@ -20,7 +20,7 @@
     <div class="header-top">Governo do Estado do Ceará · Secretaria da Educação</div>
     <div class="header-main">
       <div class="header-brand">
-        <div class="seal"><img src="walter.jpeg" alt="Logo da escola"></div>
+        <div class="seal"><img src="<?= base_url('walter.jpg') ?>" alt="Logo da escola"></div>
         <div>
           <div class="school">Escola Estadual De Educação Profissional Walter Ramos de Araújo</div>
           <div class="sys">SBE · Sistema de Biblioteca Escolar</div>
@@ -42,7 +42,7 @@
       <div class="user-chip">
         <span class="role-badge">Bibliotecário</span>
         <span>Setor de Biblioteca</span>
-        <a href="login-aluno.html" class="tbl-btn">Sair</a>
+        <?= anchor('/login/deslogar', 'Sair', ['class' => 'tbl-btn']) ?>
       </div>
     </div>
   </header>
@@ -60,7 +60,7 @@
       <form method="post" action="<?= site_url('bibliotecario/tombo/salvar') ?>">
         <?= csrf_field() ?>
         <div class="form-grid three">
-          <div class="field"><label>Registro</label><input type="number" name="registro" placeholder="Ex.: T-2026-0013"
+          <div class="field"><label>Registro</label><input type="text" name="registro" placeholder="Ex.: T-2026-0013"
               required></div>
           <div class="field"><label>Data de entrada</label><input name="data_entrada" type="date"></div>
           <div class="field"><label>Autor</label><input name="autor" placeholder="Nome do autor"></div>
@@ -78,7 +78,7 @@
               <option>Transferência</option>
               <option>Outro</option>
             </select></div>
-          <div class="field"><label>Código de gênero</label><input name="codigo_genero" placeholder="Ex.: ROM"></div>
+          <div class="field"><label>Código de gênero</label><input name="codigo_genero" placeholder="Ex.: Conto"></div>
         </div>
         <button class="btn-primary small" type="submit">Registrar tombo</button>
       </form>

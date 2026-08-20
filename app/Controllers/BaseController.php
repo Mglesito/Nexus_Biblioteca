@@ -42,4 +42,43 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         // $this->session = service('session');
     }
+
+    /**
+     * Verifica se o usuário está autenticado como bibliotecário
+     * Se não estiver, redireciona para login
+     */
+    protected function verificarBibliotecario()
+    {
+        if (session()->get('logado') !== true || session()->get('tipo_usuario') != 2) {
+            return redirect()->to('/login');
+        }
+
+        return null;
+    }
+
+    /**
+     * Verifica se o usuário está autenticado como aluno
+     * Se não estiver, redireciona para login
+     */
+    protected function verificarAluno()
+    {
+        if (session()->get('logado') !== true || session()->get('tipo_usuario') != 1) {
+            return redirect()->to('/login');
+        }
+
+        return null;
+    }
+
+    /**
+     * Verifica se o usuário está autenticado como suporte
+     * Se não estiver, redireciona para login
+     */
+    protected function verificarSuporte()
+    {
+        if (session()->get('logado') !== true || session()->get('tipo_usuario') != 3) {
+            return redirect()->to('/login');
+        }
+
+        return null;
+    }
 }
